@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+.box-login{
+	margin-right:200px;
+	margin-left:200px;
+	border: 1px solid #eee;
+	padding:20px;	
+}
+
+.imagem-estoque-index{
+	min-height: 50px; 
+	max-height: 300px;
+}
+
