@@ -1,3 +1,5 @@
+<%@page import="java.sql.Connection"%>
+<%@page import="gerestoque.persistence.DBUtil"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -18,15 +20,17 @@
 				<span>			
 					<div class="row">
 						<div class="col-xs-12">
-							<h4 class="text-center">Gerencia Estoque Show</h1>
-							<img src="imgs/estoque-index.png" class="img-responsive center-block imagem-estoque-index">
-							<label for="txtLogin">Login:</label>
-							<input type="text" class="form-control" name="txtLogin" id="txtLogin">
-							<hr class="divider"></hr>
-							<label for="txtSenha">Senha:</label>
-							<input type="password" class="form-control" name="txtSenha" id="txtSenha">
-							<hr class="divider"></hr>
-							<button type="submit" class="btn btn-primary btn-block">Logar</button>
+							<form action="./ServletLogin" method="post">
+								<h4 class="text-center">Gerencia Estoque Show</h4>
+								<img src="imgs/estoque-index.png" class="img-responsive center-block imagem-estoque-index">
+								<label for="txtLogin">Login:</label>
+								<input type="text" class="form-control" name="txtLogin" id="txtLogin">
+								<hr class="divider"></hr>
+								<label for="txtSenha">Senha:</label>
+								<input type="password" class="form-control" name="txtSenha" id="txtSenha">
+								<hr class="divider"></hr>
+								<button type="submit" class="btn btn-primary btn-block">Logar</button>
+							</form>
 						</div>
 					</div>
 				</span>
