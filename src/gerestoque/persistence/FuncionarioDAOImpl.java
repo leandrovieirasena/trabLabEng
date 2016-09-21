@@ -71,10 +71,8 @@ public class FuncionarioDAOImpl implements FuncionarioDAO {
 		}
 		
 		if( func.getNome() == null ){
-			System.out.println("Não foi possivel realizar o Login, tente novamente.");
 			return false;
 		} else 	if( func.getNome() != null ){
-			System.out.println("Login realizado com sucesso.");
 			return true;
 		}
 		return false;

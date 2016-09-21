@@ -17,17 +17,19 @@
 		<div class="alinha-box-login">
 			<div class="box-login">		
 				<div class="row">
-					<div class="col-xs-12">
-						<h4 class="text-center">Gerencia Estoque Show</h4>
-						<img src="imgs/estoque-index.png" class="img-responsive center-block imagem-estoque-index">
-						<label for="txtLogin">Login:</label>
-						<input type="text" class="form-control" name="txtLogin" id="txtLogin">
-						<hr class="divider"></hr>
-						<label for="txtSenha">Senha:</label>
-						<input type="password" class="form-control" name="txtSenha" id="txtSenha">
-						<hr class="divider"></hr>
-						<button id="btnLogin" type="submit" class="btn btn-primary btn-block">Logar</button>
-					</div>
+					<form action="./ServletLogin" method="POST">
+						<div class="col-xs-12">
+							<h4 class="text-center">Gerencia Estoque Show</h4>
+							<img src="imgs/estoque-index.png" class="img-responsive center-block imagem-estoque-index">
+							<label for="txtLogin">Login:</label>
+							<input type="text" class="form-control" name="txtLogin" id="txtLogin">
+							<hr class="divider"></hr>
+							<label for="txtSenha">Senha:</label>
+							<input type="password" class="form-control" name="txtSenha" id="txtSenha">
+							<hr class="divider"></hr>
+							<button id="btnLogin" type="submit" class="btn btn-primary btn-block">Logar</button>
+						</div>
+					</form>
 				</div>
 			</div>	
 		</div>
