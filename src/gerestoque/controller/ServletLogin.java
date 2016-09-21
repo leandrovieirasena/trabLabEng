@@ -7,9 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import gerestoque.model.Funcionario;
 import gerestoque.model.Produto;
-import gerestoque.persistence.ProdutoDAO;
-import gerestoque.persistence.ProdutoDAOImpl;
+import gerestoque.persistence.FuncionarioDAO;
+import gerestoque.persistence.FuncionarioDAOImpl;
 
 @WebServlet("/ServletLogin")
 public class ServletLogin extends HttpServlet {
@@ -27,14 +28,17 @@ public class ServletLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String txtLogin = request.getParameter("txtLogin");
-
-		Produto prod = new Produto();
-		ProdutoDAO prodDAO = new ProdutoDAOImpl();
-		prod.setNome(txtLogin);
+		String txtSenha = request.getParameter("txtSenha");
 		
-		prodDAO.cadastrarProduto(prod);
+//		Funcionario func = new Funcionario();
+		FuncionarioDAO funcDAO = new FuncionarioDAOImpl();
 		
-		response.sendRedirect("./index.jsp");
+//		func.setCpf(txtLogin);
+//		func.setSenha(txtSenha);
+		if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == false){
+			System.out.println("aaa");
+		}
+		
 		
 	}
 

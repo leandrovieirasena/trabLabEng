@@ -25,5 +25,4 @@ VALUES ('Mateus Andrade','12.456.072-3','123.123.123-67','11-2541-6302','11-9874
 INSERT INTO funcionarios( nome, rg, cpf, telefone, celular, data_nascimento, email, senha, acesso)
 VALUES ('admin','124560723','5454','11-2541-6302','11-98746-3620','1990/02/23','email@email','1234','A')
 
-
-SELECT cpf, senha, acesso FROM funcionarios WHERE cpf = '5454' AND senha = '1234'
+SELECT * FROM funcionarios WHERE cpf LIKE '%5454%' AND senha LIKE '%1234%'

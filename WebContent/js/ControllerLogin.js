@@ -3,7 +3,8 @@ $(document).on("click","#btnLogin",function(){
 		url : 'ServletLogin',
 		method: "POST",
 		data : {
-			txtLogin : $('#txtLogin').val()
+			txtLogin : $('#txtLogin').val(),
+			txtSenha : $('#txtSenha').val()
 		},
 		success : function() {
 			console.log("ok");

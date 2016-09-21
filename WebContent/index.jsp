@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/generico.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/ControllerLogin.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
