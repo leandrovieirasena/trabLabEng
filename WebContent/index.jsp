@@ -26,7 +26,7 @@
 						<label for="txtSenha">Senha:</label>
 						<input type="password" class="form-control" name="txtSenha" id="txtSenha">
 						<hr class="divider"></hr>
-						<button id="btnLogin" class="btn btn-primary btn-block">Logar</button>
+						<button id="btnLogin" type="submit" class="btn btn-primary btn-block">Logar</button>
 					</div>
 				</div>
 			</div>	

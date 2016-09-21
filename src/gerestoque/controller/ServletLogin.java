@@ -1,6 +1,8 @@
 package gerestoque.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,6 +39,9 @@ public class ServletLogin extends HttpServlet {
 //		func.setSenha(txtSenha);
 		if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == false){
 			System.out.println("aaa");
+		} else if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == true){
+			System.out.println("show");
+			response.sendRedirect("dashboard.jsp");
 		}
 		
 		

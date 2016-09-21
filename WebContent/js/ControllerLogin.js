@@ -1,7 +1,7 @@
 $(document).on("click","#btnLogin",function(){
 	$.ajax({
 		url : 'ServletLogin',
-		method: "POST",
+		method: "GET",
 		data : {
 			txtLogin : $('#txtLogin').val(),
 			txtSenha : $('#txtSenha').val()
