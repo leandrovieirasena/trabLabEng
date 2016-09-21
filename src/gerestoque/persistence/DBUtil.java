@@ -5,8 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBUtil {
-
-	private static final String URL = "jdbc:mysql://localhost:3535/lojas?autoReconnect=true&useSSL=false";
+	
+	/* verificar com os valores feitos na conexao usada na maquina */
+	
+	private static final String URL = "jdbc:mysql://localhost:3535/gerestoque?autoReconnect=true&useSSL=false";
 	private static final String USER="root";
 	private static final String PASS="manager";
 	private static final String DRIVER="com.mysql.jdbc.Driver";
