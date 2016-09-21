@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import gerestoque.model.Produto;
 import gerestoque.persistence.ProdutoDAO;
 import gerestoque.persistence.ProdutoDAOImpl;
 
@@ -24,7 +25,17 @@ public class ServletLogin extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String txtLogin = request.getParameter("txtLogin");
+
+		Produto prod = new Produto();
 		ProdutoDAO prodDAO = new ProdutoDAOImpl();
+		prod.setNome(txtLogin);
+		
+		prodDAO.cadastrarProduto(prod);
+		
+		response.sendRedirect("./index.jsp");
+		
 	}
 
 }

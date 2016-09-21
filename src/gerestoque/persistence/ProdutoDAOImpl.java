@@ -1,7 +1,11 @@
 package gerestoque.persistence;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
+
+import com.sun.org.apache.xml.internal.utils.PrefixResolverDefault;
 
 import gerestoque.model.Produto;
 
@@ -13,8 +17,17 @@ public class ProdutoDAOImpl implements ProdutoDAO {
 	}
 
 	@Override
-	public void cadastrarProduto(Produto produto) {
-		// TODO Auto-generated method stub
+	public void cadastrarProduto(Produto prod) {
+		String sql ="INSERT INTO produtos (nome) " + 
+		"VALUES (?)";
+		try {
+			PreparedStatement psmt = con.prepareStatement(sql);
+			psmt.setString(1, prod.getNome());
+			psmt.executeUpdate();
+			System.out.println("Incluido com sucesso");
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
 		
 	}
 
