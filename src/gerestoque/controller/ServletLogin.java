@@ -31,9 +31,10 @@ public class ServletLogin extends HttpServlet {
 		FuncionarioDAO funcDAO = new FuncionarioDAOImpl();
 
 		if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == false){
-			System.out.println("aaa");
+			System.out.println("Login Incorreto.");
+			response.sendRedirect("index.jsp");
 		} else if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == true){
-			System.out.println("show");
+			System.out.println("Login Correto.");
     		HttpSession session = request.getSession();
    		    session.setAttribute("usuario", txtLogin);
    		    session.setAttribute("codigo", 5);
@@ -46,9 +47,7 @@ public class ServletLogin extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		doGet(request, response);
-		
 	}
 
 }

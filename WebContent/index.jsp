@@ -9,16 +9,15 @@
 <link rel="stylesheet" href="css/generico.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/ControllerLogin.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
+	<div style="margin-top:40px;" class="container-fluid">
 		<div class="alinha-box-login">
 			<div class="box-login">		
 				<div class="row">
 					<form action="./ServletLogin" method="POST">
-						<div class="col-xs-12">
+						<div class="col-xs-6 col-xs-offset-3">
 							<h4 class="text-center">Gerencia Estoque Show</h4>
 							<img src="imgs/estoque-index.png" class="img-responsive center-block imagem-estoque-index">
 							<label for="txtLogin">Login:</label>
@@ -34,6 +33,5 @@
 			</div>	
 		</div>
 	</div>
-
 </body>
 </html>

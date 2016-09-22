@@ -70,9 +70,7 @@ public class FuncionarioDAOImpl implements FuncionarioDAO {
 			System.out.println("Erro SQL: "+e);
 		}
 		
-		if( func.getNome() == null ){
-			return false;
-		} else 	if( func.getNome() != null ){
+		if( func.getNome() != null ){
 			return true;
 		}
 		return false;

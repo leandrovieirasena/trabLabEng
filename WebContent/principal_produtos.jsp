@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<%@page import="gerestoque.model.Funcionario"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Dashboard</title>
+<title>Principal Produtos</title>
 <link rel="stylesheet" href="css/generico.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<% if(session.getAttribute("usuario") != null){ %>	
 	<nav class="navbar navbar-default navbar-static-top">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -34,7 +32,7 @@
 	        <li>
 	        	<a href="./principal_lojas.jsp">Lojas<i class="glyphicon glyphicon-home margin-icone-menu"></i></a>
 	        </li>
-	        <li>
+	        <li class="active">
 	        	<a href="./principal_produtos.jsp">Produtos<i class="glyphicon glyphicon-tags margin-icone-menu"></i></a>
 	        </li>
 	        <li>
@@ -54,28 +52,87 @@
 	</nav>
 	
 	<div class="container-fluid">
-		<div class="col-xs-12">
-			<h1>Olá</h1>
-		</div>
-	</div>
-	
-	<% } else { %>
-	
-	<div class="container-fluid">
+		
+		<ol class="breadcrumb">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Gerencia Produtos</a></li>
+		</ol>
+		
 		<div class="row">
+		
 			<div class="col-xs-12">
-				<h1 class="text-center">Ahhhhhhhhhhh! Você não devia estar aqui....</h1>
-				<br>
-				<iframe class="center-block" width="560" height="315" 
-					src="https://www.youtube.com/embed/SIaFtAKnqBU?autoplay=1&controls=0&loop=1">
-				</iframe>
-				<h3 class="text-center"><p>Tente realizar seu Login,</p> <p>e boa sorte na Prova de Lab.Engenharia. :)</p></h1>
+			
+				<table class="table table-bordered">
+				  <tr>
+				  	<th>
+					    <div class="input-group">
+						  <span class="input-group-addon">Filtrar:</span>
+					  	  <select class="form-control btn-block"><option>Crescente</option></select>
+						</div>
+				  	</th>
+				  	
+				  	<th colspan="5">
+					    <div class="form-group form-group-xs">
+					    	<div class="col-xs-12">
+							    <div class="input-group">
+								  <span class="input-group-addon">Nome:</span>
+								  <input type="text" class="form-control" placeholder="Pesquisar Produto:">
+								</div>
+					    	</div>
+					  	</div>
+				  	</th>
+				  </tr>
+				  
+				  <tr>
+				    <th>Código</th>
+				    <th>Nome</th>
+				    <th>Celular</th>
+				    <th>Email</th>
+				    <th>Alterar</th>
+				    <th>Excluir</th>
+				  </tr>
+				  
+				  <tr>
+				    <td>01</td>
+				    <td>Mateus</td>
+				    <td>957952208</td>
+				    <td>email@email</td>
+	 				<td>
+						<button type="button" class="btn btn-primary btn-block">
+							Alterar
+							<i class="glyphicon glyphicon-pencil margin-icone-menu"></i>	
+						</button>	
+	 				</td>
+	 				<td>
+						<button type="button" class="btn btn-danger btn-block">
+							Excluir
+							<i class="glyphicon glyphicon-remove margin-icone-menu"></i>
+						</button>	
+	 				</td>
+				  </tr>
+				  <tr>
+				  	<td colspan="3">
+				  		<button class="btn btn-default btn-block">
+				  		Exibir Mais 5
+				  		<i class="glyphicon glyphicon-plus"></i>
+				  		</button>
+				  	</td>
+				  	<td colspan="3">
+				  		<button class="btn btn-default btn-block">
+				  		Exibir Menos 5
+						<i class="glyphicon glyphicon-minus"></i>
+				  		</button>
+				  	</td>
+				  </tr>
+				</table>
+			</div>		
+			
+			<div class="col-xs-12">
+				<button class="btn btn-success btn-block">Adicionar Novo Produto</button>
 			</div>
+			
 		</div>
 	</div>
-	
-	
-	<% } %>
 	
 </body>
 </html>
