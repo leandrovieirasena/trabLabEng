@@ -55,7 +55,8 @@
 	
 	<div class="container-fluid">
 		<div class="col-xs-12">
-			<h1>Olá</h1>
+			<h4 style="margin-bottom:-10px; padding-bottom:-10px;">Olá <span class="text-primary"><%= session.getAttribute("usuario") %></span>, aqui estão algumas informações que você talvez ache interessante:</h4>
+			<hr style="margin-bottom:0; padding-bottom:0;" class="divider"></hr>
 		</div>
 	</div>
 	

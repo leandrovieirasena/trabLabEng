@@ -29,14 +29,15 @@ public class ServletLogin extends HttpServlet {
 		String txtSenha = request.getParameter("txtSenha");
 		
 		FuncionarioDAO funcDAO = new FuncionarioDAOImpl();
-
+		Funcionario func = new Funcionario();
+		func.setNome("Mateus");
 		if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == false){
 			System.out.println("Login Incorreto.");
 			response.sendRedirect("index.jsp");
 		} else if(funcDAO.verificaLoginFuncionario(txtLogin, txtSenha) == true){
 			System.out.println("Login Correto.");
     		HttpSession session = request.getSession();
-   		    session.setAttribute("usuario", txtLogin);
+   		    session.setAttribute("usuario", func.getNome());
    		    session.setAttribute("codigo", 5);
 			response.sendRedirect("dashboard.jsp");
 		}		

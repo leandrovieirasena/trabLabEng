@@ -26,3 +26,23 @@ INSERT INTO funcionarios( nome, rg, cpf, telefone, celular, data_nascimento, ema
 VALUES ('admin','124560723','5454','11-2541-6302','11-98746-3620','1990/02/23','email@email','1234','A')
 
 SELECT * FROM funcionarios WHERE cpf LIKE '%5454%' AND senha LIKE '%1234%'
+
+/* Executar/chamar procedure */
+
+DELIMITER $$
+
+CREATE PROCEDURE Selecionar_Funcionarios()
+BEGIN
+	SELECT * FROM funcionarios;
+END $$
+DELIMITER ;
+
+Call Selecionar_Funcionarios()
+
+/* Executar/chamar procedure */
+
+/* Trazer ultimo funcionario cadastrado*/
+
+SELECT * FROM funcionarios WHERE codigo = (SELECT MAX(codigo) FROM funcionarios)
+
+/* Trazer ultimo funcionario cadastrado*/
